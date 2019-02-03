@@ -964,6 +964,9 @@ $G 2) $R NO INSTALL AND EXIT$G"
 	sleep 5
 	echo
 	python2 spammer.py --delay $S $N
+	echo
+	printf "$G VOLVER AL MENU "
+	read enter
 	reiniciar
 	;;
 12)
