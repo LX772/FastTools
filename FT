@@ -913,7 +913,7 @@ $G 2) $R NO INSTALL AND EXIT$G"
 					rm -rf Spammer-Grab
 					sleep 2
 					echo
-					git clone https://github.com/Noxturnix/Spammer-Grab.git &&cd Spammer-Grab && chmod 777 spammer.py && cd $HOME && mv Spammer-Grab FastTools/.sms
+					git clone https://github.com/Noxturnix/Spammer-Grab.git && cd Spammer-Grab && chmod 777 spammer.py && cd $HOME && mv Spammer-Grab FastTools/.sms
 					;;
 				2)
 					exit
