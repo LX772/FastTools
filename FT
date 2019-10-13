@@ -106,6 +106,7 @@ printf  "$C
 13)$G APK HANDLER+MSF $C
 14)$G Crear Virus$C
 15)$G Force Brute GMAIL$R
+16)$G UPDAPTED(Actualizar)$R
 0) $Y Info Of Script$R
 00) $R exit $Y
 "
@@ -321,8 +322,11 @@ reiniciar
 	if [ -e $PREFIX/bin/php ]; then
                 printf "\n$Y [!]$Y PHP . . .$G DONE!!!\n$W"
 		sleep 5
-        else
-                printf "\n$R Oops!! $R FT required PHP , do u wanna install it $W"
+	elif [ -e $PREFIX/bin/autossh ]; then  
+			printf "\n$Y [!]$Y AUTOSSH . . .$G DONE!!!\n$W"                                          
+			sleep 5                 
+		else                               
+			printf "\n$R Oops!! $R FT required AUTOSSH and PHP, do u wanna install it $W"
                         echo
                         sleep 5
                         printf "$Y"
@@ -364,7 +368,7 @@ $G 1) $C INSTALL PHP
 	printf "$G"
 	read -p " INTRODUCE DOMINIO AL URL ej'mundo' >> " m
 	echo
-	read -p " INTRODUCE UN PUERTO (recomendado '8080')" phport
+	read -p " INTRODUCE UN PUERTO (recomendado '8080') >> " phport
 	sleep 2
 	echo $(clear)
 	setterm -foreground yellow
@@ -1410,8 +1414,10 @@ case $b in
 esac
 ;;
 
-		
-		00)
+16)
+	rm -rf FastTools && git clone https://www.github.com/LX772/FastTools.git && bash FastTools/install.sh
+	;;
+	00)
 			echo $(exit)
 			;;
 	esac
